@@ -1,8 +1,4 @@
 // jenkins-dsl/sample/folders.jenkins
-folder('SeedJobs') {
-    description('Seed jobs (do not edit manually)')
-}
-
 folder('Sample') {
     description('Sample demo jobs for pipeline examples')
 }
