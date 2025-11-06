@@ -5,7 +5,7 @@ This repo contains a demo Job DSL setup for Jenkins.
 Structure:
 - `jenkins-dsl/sample/` : Job DSL files that create folders and jobs.
 - `jenkins-dsl/sample/Jenkinsfile` : The Jenkinsfile used by the generated pipeline job.
-- `Jenkinsfile` : (optional) parent pipeline that triggers the seed job in Jenkins.
+- `Jenkinsfile` : parent pipeline that triggers the seed job in Jenkins.
 
 **Before using**
 1. My repo HTTPS URL `https://github.com/Welkinoid52/Jenkins-sample.git`.
