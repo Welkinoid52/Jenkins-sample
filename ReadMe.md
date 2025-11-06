@@ -1,14 +1,44 @@
-# Demo Job DSL repository (sample)
+🧩 Jenkins Demo — Folder Structure, Jobs, and RBAC
+📘 Overview
 
-This repo contains a demo Job DSL setup for Jenkins.
+This demo showcases Jenkins automation using Job DSL and RBAC (Role-Based Access Control).
+It defines folder hierarchies, creates sample jobs, and configures restricted access for specific users.
 
-Structure:
-- `jenkins-dsl/sample/` : Job DSL files that create folders and jobs.
-- `jenkins-dsl/sample/Jenkinsfile` : The Jenkinsfile used by the generated pipeline job.
-- `Jenkinsfile` : parent pipeline that triggers the seed job in Jenkins.
+🗂 Folder Structure
 
-**Before using**
-1. My repo HTTPS URL `https://github.com/Welkinoid52/Jenkins-sample.git`.
-2. Push this repo to GitHub (branch `main`).
-3. Create a seed job in Jenkins (see `seed-job-dsl.groovy` if you want to create it via Job DSL). Configure seed job to checkout this repo `main` branch and process job DSL files under `jenkins-dsl/sample/`.
-4. Run the seed job once — it will create `Sample/my-sample-pipeline`, `Sample/hello-freestyle`, and folders.
+Defined in folders.jenkins using Job DSL:
+
+folder('Sample') {
+    description('Sample demo jobs for pipeline examples')
+}
+
+folder('Sample/TeamA') {
+    description('TeamA demo folder')
+}
+
+
+Sample/ — Main folder for demo pipeline jobs.
+
+Sample/TeamA/ — Subfolder for TeamA-specific jobs.
+
+⚙️ Job DSL Scripts
+
+Located under jenkins-dsl/sample/, the following example jobs demonstrate different Jenkins job types:
+
+File Name	Description
+sample_pipeline_job.jenkins	Basic pipeline job example
+sample_freestyle_job.jenkins	Freestyle job example
+my-parameter-pipeline.jenkins	Parameterized pipeline job
+🔒 RBAC Configuration
+
+Added RBAC for user tom, granting access only to the Sample folder, restricting visibility and permissions outside it.
+
+🧠 Purpose
+
+This demo illustrates how to:
+
+Organize Jenkins jobs with a structured folder hierarchy
+
+Automate job creation using Jenkins Job DSL
+
+Enforce user-specific access controls with RBAC
