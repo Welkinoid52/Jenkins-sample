@@ -1,5 +1,4 @@
-// jenkins-dsl/sample/sample_pipeline_job.jenkins
-pipelineJob('Sample/my-sample-pipeline') {
+pipelineJob('Sample/my-parameter-pipeline') {
     description('Demo pipeline created by the seed job; Jenkinsfile lives in the same public repo/branch.')
     definition {
         cpsScm {
@@ -14,7 +13,7 @@ pipelineJob('Sample/my-sample-pipeline') {
                     branches('*/main') // using branch 'main'
                 }
             }
-            scriptPath('jenkins-dsl/jenkins-scripts/sample_pipeline_job.Jenkinsfile') // Jenkinsfile path in same repo
+            scriptPath('jenkins-dsl/jenkins-scripts/sample2.Jenkinsfile') // Jenkinsfile path in same repo
         }
     }
     triggers {
