@@ -1,0 +1,23 @@
+// jenkins-dsl/sample/sample_pipeline_job.jenkins
+pipelineJob('Sample/my-sample-pipeline') {
+    description('Demo pipeline created by the seed job; Jenkinsfile lives in the same public repo/branch.')
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        // REPLACE with your public repo url, e.g.:
+                        // url('https://github.com/my-org/my-demo-dsl-repo.git')
+                        url('https://github.com/Welkinoid52/Jenkins-sample.git')
+                        // public repo -> no credentials
+                    }
+                    branches('*/main') // using branch 'main'
+                }
+            }
+            scriptPath('jenkins-dsl/sample/Jenkinsfile') // Jenkinsfile path in same repo
+        }
+    }
+    triggers {
+        githubPush()
+    }
+}

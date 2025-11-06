@@ -1,0 +1,7 @@
+// jenkins-dsl/sample/sample_freestyle_job.jenkins
+job('Sample/hello-freestyle') {
+  description('Simple freestyle job created by DSL')
+  steps {
+    shell('echo "Hello from freestyle job"')
+  }
+}
