@@ -1,5 +1,9 @@
 pipelineJob('Sample/my-parameter-pipeline') {
     description('Demo pipeline created by the seed job; Jenkinsfile lives in the same public repo/branch.')
+    parameters {
+        stringParam('ENV', 'dev', 'Target environment (dev/stage/prod)')
+        booleanParam('RUN_SMOKE', true, 'Run smoke tests?')
+    }
     definition {
         cpsScm {
             scm {
