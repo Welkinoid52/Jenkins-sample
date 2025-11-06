@@ -1,13 +1,3 @@
-// jenkins-dsl/sample/param_pipeline_job.jenkins
-pipelineJob('Sample/param-demo-pipeline') {
-    description('Pipeline that demonstrates parameters and conditional stage')
-    parameters {
-        stringParam('ENV', 'dev', 'Target environment (dev/stage/prod)')
-        booleanParam('RUN_SMOKE', true, 'Run smoke tests?')
-    }
-    definition {
-        cps {
-            script("""
 pipeline {
   agent any
   stages {
@@ -30,9 +20,4 @@ pipeline {
       }
     }
   }
-}
-            """.stripIndent())
-            sandbox()
-        }
-    }
 }
