@@ -3,7 +3,7 @@ freeStyleJob('Seed-Job') {
     label('built-in')
     scm {
         git {
-            branch('release-preprod')
+            branch('main')
             remote {
                 url('https://github.com/Welkinoid52/Jenkins-sample.git')
             }
